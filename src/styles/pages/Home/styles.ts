@@ -3,27 +3,35 @@ import { darken } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.header`
-  display: flex;
-  align-items: center;
   position: relative;
-  justify-content: space-between;
-
   background-color: ${(props) => props.theme.colors.primary};
-  padding: 0 2rem;
-
-  height: 5.625rem;
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
 `;
 
-export const Logo = styled.img``;
+export const InnerContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 5.625rem;
+`;
+
+export const Logo = styled.img`
+  object-fit: scale-down;
+`;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
   padding: 0 1rem;
+  list-style-type: none;
+
+  @media (max-width: 620px) {
+    display: none;
+  }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.span`
   position: relative;
   &:first-child {
     margin-right: 0.7rem;
@@ -36,6 +44,8 @@ export const NavLink = styled.a`
   border: 0;
   border-radius: 1.5rem;
   background-color: ${(props) => props.theme.colors.palette.blue[500]};
+
+  transition: background-color 0.2s;
 
   :hover {
     background-color: ${darken(0.1, "#3182CE")};
@@ -71,8 +81,15 @@ export const TryNowButton = styled.a`
   margin-top: 1rem;
   cursor: pointer;
   user-select: none;
+
+  transition: all 0.2s;
+
   &:hover {
     background-color: ${darken(0.1, "#48BB78")};
+  }
+
+  &:active {
+    box-shadow: ${(props) => props.theme.shadow.button};
   }
 `;
 
@@ -102,4 +119,51 @@ export const GetSartedSection = styled.section`
       width: 65%;
     }
   }
+`;
+
+export const ToggleButton = styled.button`
+  display: flex;
+  background: ${(pros) => pros.theme.colors.palette.blue[500]};
+
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 1.5rem;
+
+  @media (min-width: 620px) {
+    display: none;
+  }
+
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${darken(0.1, "#3182CE")};
+  }
+
+  &:active {
+    box-shadow: ${(props) => props.theme.shadow.button};
+  }
+`;
+
+export const NavCollpase = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  > span {
+    margin-right: 0 !important;
+    background: transparent;
+
+    & + span {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (min-width: 620px) {
+    display: none;
+  }
+`;
+
+export const TestDiv = styled.div`
+  height: 400px;
+  width: 400px;
+  background-color: red;
 `;

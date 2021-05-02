@@ -9,10 +9,20 @@ export const theme = {
       blue: {
         400: "#30B4FE",
         500: "#3182CE",
+        600: "#2B6CB0",
       },
       green: {
         400: "#48BB78",
       },
+      gray: {
+        300: "#cbd5e0",
+        400: " #A0AEC0",
+        500: "#718096",
+        600: "#4A5568",
+      },
     },
+  },
+  shadow: {
+    button: "0 0 0 0.55rem #edf2f7",
   },
 };
