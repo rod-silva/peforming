@@ -1,21 +1,23 @@
+import Link from "next/link";
+
 import { useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
-import { Collapse } from "../../../components/Collapse";
-import { useGlobalContext } from "../../../context/globalContext";
+
+import { Collapse } from "../Collapse";
 
 import {
-  Container,
   Logo,
   Nav,
   NavLink,
+  Container,
+  NavCollpase,
   ToggleButton,
   InnerContainer,
-  NavCollpase,
 } from "./styles";
 
 export const HomeHeader: React.FC = () => {
   const [isCollapse, seIsCollapse] = useState(false);
-  const { handleSignInModal } = useGlobalContext();
+
   return (
     <Container>
       <InnerContainer>
@@ -25,7 +27,9 @@ export const HomeHeader: React.FC = () => {
         </ToggleButton>
         <Nav>
           <NavLink>About us</NavLink>
-          <NavLink onClick={handleSignInModal}>Sign in</NavLink>
+          <Link href="/sign-in">
+            <NavLink>Sign in</NavLink>
+          </Link>
         </Nav>
       </InnerContainer>
       <Collapse isCollpase={isCollapse}>

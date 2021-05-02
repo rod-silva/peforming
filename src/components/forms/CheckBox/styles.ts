@@ -23,8 +23,8 @@ export const FormControl = styled.label<FormControlProps>`
     cursor: pointer;
     position: absolute;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 1.5625rem;
+    width: 1.5625rem;
     background-color: #eee;
     border: 3px solid ${(props) => props.theme.colors.palette.gray[400]};
     border-radius: 0.4rem;
