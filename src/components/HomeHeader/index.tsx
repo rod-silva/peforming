@@ -35,7 +35,9 @@ export const HomeHeader: React.FC = () => {
       <Collapse isCollpase={isCollapse}>
         <NavCollpase>
           <NavLink>About us</NavLink>
-          <NavLink>Sign in</NavLink>
+          <Link href="/sign-in">
+            <NavLink>Sign in</NavLink>
+          </Link>
         </NavCollpase>
       </Collapse>
     </Container>

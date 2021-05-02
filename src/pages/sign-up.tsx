@@ -25,7 +25,7 @@ export default function SignUP(): JSX.Element {
   return (
     <>
       <NextHead>
-        <title>RodNews | Login</title>
+        <title>RodNews | Sign up</title>
       </NextHead>
       <Center>
         <Form initial={{ y: -500, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
@@ -47,7 +47,7 @@ export default function SignUP(): JSX.Element {
                 onClickRightIcon={() => setShowPassword(!showPassword)}
                 rightIcon={showPassword ? <IoMdEyeOff /> : <IoMdEye />}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Sign up</Button>
             </Body>
           </Container>
         </Form>

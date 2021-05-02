@@ -64,7 +64,7 @@ export default function SignIn(): JSX.Element {
                 >
                   Remember
                 </Checkbox>
-                <NextLink href="/forgotuu">
+                <NextLink href="/forgot-password">
                   <Question>Forgot your password ?</Question>
                 </NextLink>
               </CheckBoxWrapper>

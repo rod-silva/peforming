@@ -55,11 +55,11 @@ export const NavCollpase = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  > span {
+  > a {
     margin-right: 0 !important;
     background: transparent;
 
-    & + span {
+    & + a {
       margin-top: 0.5rem;
     }
   }
