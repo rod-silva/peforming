@@ -17,7 +17,7 @@ import {
   BackButton,
 } from "../styles/pages/Login/styles";
 
-import { Body } from "../styles/pages/SignUp";
+import { Body, HStack } from "../styles/pages/SignUp";
 
 export default function SignUP(): JSX.Element {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +25,7 @@ export default function SignUP(): JSX.Element {
   return (
     <>
       <NextHead>
-        <title>RodNews | Sign up</title>
+        <title>Performing | Sign up</title>
       </NextHead>
       <Center>
         <Form initial={{ y: -500, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
@@ -39,6 +39,10 @@ export default function SignUP(): JSX.Element {
               <img src="/assets/growth.svg" alt="logo" />
             </Head>
             <Body>
+              <HStack>
+                <Input name="firstName" label="First Name" type="text" />
+                <Input name="seconfName" label="Second Name" type="text" />
+              </HStack>
               <Input name="Email" label="Email" type="email" />
               <Input
                 name="Password"

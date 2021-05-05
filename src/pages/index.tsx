@@ -13,7 +13,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>RodNews | home</title>
+        <title>Performing | home</title>
       </Head>
 
       <Main>

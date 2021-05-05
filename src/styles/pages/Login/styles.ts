@@ -48,7 +48,7 @@ export const Body = styled.div`
   flex-direction: column;
   padding: 1rem;
 
-  div + div {
+  > div + div {
     margin-top: 0.7rem;
   }
 `;

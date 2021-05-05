@@ -2,6 +2,7 @@ import NextHead from "next/head";
 import NextLink from "next/link";
 
 import { useState } from "react";
+import { signIn } from "next-auth/client";
 
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
@@ -25,14 +26,21 @@ import {
   CheckBoxWrapper,
 } from "../styles/pages/Login/styles";
 
-export default function SignIn(): JSX.Element {
+export default function Sign(): JSX.Element {
   const [isChecked, setIsChecked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
+  async function handleGoogle(): Promise<void> {
+    await signIn("google");
+  }
+
+  async function handleFacebook(): Promise<void> {
+    await signIn("facebook");
+  }
   return (
     <>
       <NextHead>
-        <title>RodNews | Login</title>
+        <title>Performing | Login</title>
       </NextHead>
       <Center>
         <Form initial={{ y: -500, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
@@ -72,10 +80,10 @@ export default function SignIn(): JSX.Element {
               <SocialLogin>
                 <p>Or try with social medias</p>
                 <SocialGroup>
-                  <button type="button">
+                  <button type="button" onClick={handleGoogle}>
                     <FcGoogle />
                   </button>
-                  <button type="button">
+                  <button type="button" onClick={handleFacebook}>
                     <AiFillFacebook />
                   </button>
                 </SocialGroup>
