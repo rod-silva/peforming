@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   background-color: ${(props) => props.theme.colors.primary};
   width: 14rem;
+  transition: all 0.3s;
+  box-shadow: 0 0 2px 3px ${(props) => props.theme.colors.palette.gray[400]};
+
+  @media (max-width: 780px) {
+    margin-left: -14rem;
+  }
 `;
 
 export const Header = styled.header`
@@ -12,15 +19,15 @@ export const Header = styled.header`
 
   > img {
     object-fit: contain;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 2.7rem;
+    width: 2.7rem;
   }
   padding: 0.9rem;
   height: 6rem;
 
   > span {
     margin-left: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 900;
   }
 `;

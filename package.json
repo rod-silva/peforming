@@ -20,6 +20,7 @@
     "next-auth": "^3.19.5",
     "polished": "^4.1.2",
     "react": "17.0.2",
+    "react-datepicker": "^3.8.0",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "styled-components": "^5.2.3"
@@ -29,6 +30,7 @@
     "@commitlint/config-conventional": "^12.1.1",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
+    "@types/react-datepicker": "^3.1.8",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",

@@ -3,17 +3,20 @@ import { darken } from "polished";
 
 interface StyledButton {
   backgroundColor?: string;
+  color?: string;
+  borderRadius?: string;
+  onActiveBoxShadow?: string;
 }
 
 export const StyldButton = styled.button<StyledButton>`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: ${(props) => props.color ?? "inherit"};
   background-color: ${(props) => props.backgroundColor ?? "#3182CE"};
 
   border: 0;
-  border-radius: 1.5rem;
+  border-radius: ${(props) => props.borderRadius ?? "1.5rem"};
   padding: 0.7rem 1rem;
 
   font-weight: 600;
@@ -30,6 +33,6 @@ export const StyldButton = styled.button<StyledButton>`
   }
 
   &:active {
-    box-shadow: 0 0 0 4px;
+    box-shadow: ${(props) => props.onActiveBoxShadow ?? "0 0 0 4px"};
   }
 `;

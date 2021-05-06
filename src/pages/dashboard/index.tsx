@@ -1,10 +1,10 @@
-import { DashBoardLayout } from "../../components/Dashboard";
+import { Layout } from "../../components/Dashboard";
 import { Statistic } from "../../components/Statistic";
 import { Grid, Header } from "../../styles/pages/Dashboard/home";
 
 export default function DashBoard(): JSX.Element {
   return (
-    <DashBoardLayout title="home">
+    <Layout title="home">
       <>
         <Header>Home</Header>
         <Statistic />
@@ -25,6 +25,6 @@ export default function DashBoard(): JSX.Element {
           </div>
         </Grid>
       </>
-    </DashBoardLayout>
+    </Layout>
   );
 }

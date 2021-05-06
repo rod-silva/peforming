@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
 
-import { Collapse } from "../Collapse";
+import { Collapse } from "../animentions/Collapse";
 
 import {
   Logo,

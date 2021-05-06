@@ -1,5 +1,15 @@
-import { Container } from "./styles";
+import { RiMenuLine } from "react-icons/ri";
+import { useGlobalContext } from "../../../../context/globalContext";
+import { Container, Toggle } from "./styles";
 
 export const Navbar: React.FC = () => {
-  return <Container></Container>;
+  const { handleSideBarOpen } = useGlobalContext();
+
+  return (
+    <Container>
+      <Toggle onClick={handleSideBarOpen}>
+        <RiMenuLine />
+      </Toggle>
+    </Container>
+  );
 };
