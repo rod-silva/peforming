@@ -1,5 +1,5 @@
 import { Container } from "./styles";
 
-export const DashboardNavbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   return <Container></Container>;
 };
